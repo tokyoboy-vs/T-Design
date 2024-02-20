@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!--
+    PROJECT:            T-Design Website - Online Shop (OnePage Website)
+    DESCRIPTION:        Online's shop website for T-Design, to promote and sell T-Design handmade CardHolder
+    VERSION:            V 1.0.0
+    AUTHOR:             Antonio DA PAIXAO TEIXEIRA (antonio.dpxtx@eduge.ch)
+    START DATE:         24th November 2023
+    LAST UPDATE:        24th November 2023
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+    <title>T-Design</title>
+    <!-- Import CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="script/carousel.js"></script>
+    <script src="script/modalForm.js"></script>
+</head>
+
+<body>
+    <!-- Header of the website -->
+    <header>
+        <nav>
+            <div>
+                <img src="img/logo.png" alt="T-Design's Logo">
+                <ul>
+                    <li title="About Us">
+                        <a href="">About Us</a>
+                    </li>
+                    <li title="Our Product">
+                        <a href="">Our Product</a>
+                    </li>
+                    <li title="Contact Us">
+                        <a href="">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="buyButton" title="Buy Now" onClick="toggleModal()">Buy Now</button>
+        </nav>
+    </header>
+
+    <!-- Main "body" of the website -->
+    <main>
+        <!-- Modal form -->
+        <div id="modalContainer" class="form-hidden" style="display: none;">
+            <form id="orderForm">
+                <fieldset class="productDetails">
+                    <h1>Product Description</h1>
+                    <img src="img/alt.png" width="750vw">
+                    <h2>Mod. 610</h2>
+                    <h3>The original.</h3>
+                    <p>The Mod. 610 is a simple and practical wallet, made from 100% Swiss wood and using the finest vegetable-tanned Italian leather. The wallet is available in walnut or oak wood.</p>
+                    <p>The wallet has an internal pocket to hold cards and notes. The Mod. 610 is completely handmade and comes with a serial number and certificate of authenticity.</p>
+
+                    <h3>Sizes:</h3>
+                    <p>Width: 10,5cm</p>
+                    <p>Height: 6,5cm</p>
+                    <p>Thickness: 1,5cm</p>
+                </fieldset>
+                <fieldset>
+                    <h1>Personnal Informations</h1>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name">
+
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name">
+                    
+                    <label for="country">country</label>
+                    <select id="country" name="country">
+                        <option value="" hidden>Select a country</option>
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Spain">Spain</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Lichtenschtein">Lichtenschtein</option>
+                    </select>
+
+                    <label for="deliveryAdress">Delivery Adress</label>
+                    <input type="text" id="deliveryAdress" name="deliveryAdress" placeholder="Enter your delivery adress">
+
+                    <label for="PostCode">Post Code</label>
+                    <input type="text" id="PostCode" name="PostCode" placeholder="Enter the post code of your city">
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city">
+                </fieldset>
+                <fieldset>
+                    <h1>Product Informations</h1>
+                    <label for="productMatter">Matter</label>
+                    <select id="productMatter" name="productMatter">
+                        <option value="" hidden>Select a matter</option>
+                        <option value="LightWood">Walnut wood</option>
+                        <option value="DarkWood">Oak wood</option>
+                    </select>
+
+                    <label for="QuantitySelector">Quantity</label>
+                    <input type="number" id="QuantitySelector" name="quantity" value="1" min="1" max="10">
+                    <input class="buyButton" id="buyFormButton" type="submit" Value="Buy">
+                </fieldset>
+                <a title="Quit Order" onClick="toggleModal()">×</a>
+            </form>
+        </div>
+
+        <!-- Pictures Carousel -->
+        <section class="carousel">
+            <div class="prev" onclick="prevSlide()">&#10094;</div>
+            <article class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="img/main.png" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/alt.png" alt="Image 2">
+                </div>
+            </article>
+            <div class="next" onclick="nextSlide()">&#10095;</div>
+        </section>
+
+        <!-- About Us -->
+        <section class="aboutUs">
+            <h1>About Us</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Rhoncus mattis rhoncus urna neque viverra justo nec. Est ullamcorper eget nulla facilisi etiam. Lectus nulla at volutpat diam ut.
+                Aliquam ut porttitor leo a diam sollicitudin tempor id eu. Dui accumsan sit amet nulla facilisi. Egestas diam in arcu cursus euismod quis viverra nibh cras.
+                Lacus sed turpis tincidunt id aliquet risus feugiat. Fringilla est ullamcorper eget nulla. In vitae turpis massa sed elementum tempus egestas sed sed.
+            </p>
+            <p>
+                Diam volutpat commodo sed egestas egestas fringilla. Eu non diam phasellus vestibulum. Viverra maecenas accumsan lacus vel facilisis volutpat est.
+                Arcu ac tortor dignissim convallis. Mattis ullamcorper velit sed ullamcorper morbi. Metus vulputate eu scelerisque felis imperdiet.
+                Donec ultrices tincidunt arcu non sodales neque sodales ut etiam. Neque laoreet suspendisse interdum consectetur.
+                Nisi scelerisque eu ultrices vitae auctor eu augue ut. Ornare arcu odio ut sem nulla. Hac habitasse platea dictumst quisque sagittis.
+                Lacus viverra vitae congue eu consequat ac felis. Arcu risus quis varius quam quisque id diam. Varius vel pharetra vel turpis.
+                Parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer. Varius vel pharetra vel turpis. At ultrices mi tempus imperdiet nulla malesuada.
+                Quis vel eros donec ac odio.
+            </p>
+        </section>
+
+        <div class="separation"></div>
+
+        <!-- Contact Us -->
+        <section class="contactUs">
+            <h1>Contact Us</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua.</p>
+            
+            <!-- Contact Form -->
+            <form id="contactForm">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+        
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Type your message here" rows="5" required></textarea>
+        
+                <input class="buyButton" type="submit" value="Send Message">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer of the website -->
+    <footer>
+
+    </footer>
+</body>
+
+</html>
